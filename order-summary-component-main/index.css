@@ -1,0 +1,147 @@
+/* --------------------------------- global --------------------------------- */
+:root {
+  --color-main-100: hsl(225, 100%, 98%);
+  --color-main-200: hsl(225, 100%, 94%);
+  --color-main-300: hsl(225, 74%, 85%);
+  --color-main-600: hsl(224, 23%, 55%);
+  --color-main-800: hsl(223, 47%, 23%);
+  --color-accent: hsl(245, 75%, 52%);
+  --color-accent-alt: hsl(245, 69%, 69%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+  outline-color: var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font: 500 1rem 'Red Hat Display', sans-serif;
+  color: var(--color-main-600);
+  background:
+    top left / contain no-repeat
+    url(./images/pattern-background-mobile.svg) var(--color-main-200);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: var(--color-main-800);
+}
+
+a,
+button {
+  font: inherit;
+  font-weight: 700;
+  color: var(--color-accent);
+  cursor: pointer;
+  border: none;
+}
+
+/* --------------------------------- common --------------------------------- */
+.btn {
+  min-height: 3rem;
+  padding: 0 1rem;
+  color: var(--color-main-200);
+  user-select: none;
+  background: var(--color-accent);
+}
+
+.btn--outline {
+  color: var(--color-main-600);
+  background: none;
+}
+
+.btn,
+.rounded {
+  border-radius: 0.75rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* ---------------------------------- card ---------------------------------- */
+.card {
+  --space: 1.5rem;
+
+  margin: var(--space);
+  overflow: hidden;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 5rem var(--color-main-300);
+}
+
+.card__background {
+  width: 100%;
+  content: url(./images/illustration-hero.svg);
+}
+
+.card__content {
+  --max-size: 22rem;
+
+  display: grid;
+  gap: var(--space);
+  max-width: var(--max-size);
+  padding: calc(var(--space) * 2) var(--space);
+  margin: auto;
+}
+
+/* plan */
+.plan {
+  --space: 1rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space);
+  align-items: center;
+  padding: var(--space);
+  background: var(--color-main-100);
+}
+
+.plan__icon {
+  content: url(./images/icon-music.svg);
+  user-select: none;
+}
+
+.plan__title {
+  font-size: 1rem;
+}
+
+.plan__change {
+  font-size: 0.85rem;
+}
+
+/* actions */
+.actions {
+  display: grid;
+  gap: 8px;
+}
+
+.actions__pay {
+  box-shadow: 0 0.3rem 2rem var(--color-accent-alt);
+}
+
+.actions__cancel {
+  justify-self: center;
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+  font-size: 0.75rem;
+}
