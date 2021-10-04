@@ -2,7 +2,7 @@
   "scripts": {
     "lint:code": "standard --fix",
     "lint:style": "stylelint **/*.css --fix",
-    "lint": "lint:code && lint:style"
+    "lint": "yarn lint:code && yarn lint:style"
   },
   "devDependencies": {
     "prettier": "^2.4.1",
