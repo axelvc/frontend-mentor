@@ -11,32 +11,45 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Profile card component</title>
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <article>
-      <header>
-        <img src="./images/image-victor.jpg" alt="vitor image" />
-        <h1>Victor Crest</h1>
-        <span>26</span>
-        <span>London</span>
-      </header>
+    <article class="profile">
+      <img src="./images/bg-pattern-card.svg" alt="" />
 
-      <hr />
+      <section class="profile__info">
+        <img
+          class="profile__image"
+          src="./images/image-victor.jpg"
+          alt="vitor image"
+        />
+        <h1 class="profile__name">Victor Crest</h1>
+        <span class="profile__age">26</span>
+        <span class="profile__city">London</span>
+      </section>
 
-      <section>
-        <div>
-          <span>Followers</span>
-          <span>80K</span>
+      <section class="profile__stats">
+        <div class="stat">
+          <span class="stat__title">Followers</span>
+          <span class="stat__value">80K</span>
         </div>
 
-        <div>
-          <span>Likes</span>
-          <span>803K</span>
+        <div class="stat">
+          <span class="stat__title">Likes</span>
+          <span class="stat__value">803K</span>
         </div>
 
-        <div>
-          <span>Photos</span>
-          <span>1.4K</span>
+        <div class="stat">
+          <span class="stat__title">Photos</span>
+          <span class="stat__value">1.4K</span>
         </div>
       </section>
     </article>
