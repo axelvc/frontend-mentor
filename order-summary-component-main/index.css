@@ -145,3 +145,28 @@ button {
 footer {
   font-size: 0.75rem;
 }
+
+/* ------------------------- transitions ------------------------- */
+a,
+.btn {
+  transition: 150ms ease-out;
+  transition-property: color, background, transform;
+}
+
+.btn:hover {
+  background: var(--color-accent-alt);
+}
+
+.btn--outline:hover {
+  color: var(--color-main-800);
+  background: none;
+}
+
+a:hover {
+  color: var(--color-accent-alt);
+}
+
+a:active,
+.btn:active {
+  transform: scale(0.99);
+}
