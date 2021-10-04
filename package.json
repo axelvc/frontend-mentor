@@ -2,9 +2,13 @@
   "scripts": {
     "lint:code": "standard --fix",
     "lint:style": "stylelint **/*.css --fix",
-    "lint": "yarn lint:code && yarn lint:style"
+    "lint": "yarn lint:code && yarn lint:style",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "husky": "^7.0.2",
     "prettier": "^2.4.1",
     "standard": "^16.0.4",
     "stylelint": "^13.13.1",
@@ -21,6 +25,11 @@
     "extends": [
       "stylelint-config-standard",
       "stylelint-config-recess-order"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
