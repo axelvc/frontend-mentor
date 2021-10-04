@@ -1,0 +1,141 @@
+:root {
+  --color-main: hsla(0, 0%, 100%, 0.75);
+  --color-main-alt: hsl(0, 0%, 95%);
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+  outline-color: var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  min-height: 100vh;
+  font: 400 0.9375rem 'Lexend Deca', sans-serif;
+  background: var(--color-main-alt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--color-main-alt);
+}
+
+button {
+  font: unset;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: var(--color-cyan);
+}
+
+li {
+  list-style: none;
+}
+
+/* ---------------------------------- options --------------------------------- */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 59rem;
+  margin: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.options > li {
+  flex: 1 19rem;
+}
+
+.option {
+  box-sizing: border-box;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: flex-start;
+  height: 100%;
+  padding: 3rem;
+  color: var(--color-main);
+  background: var(--color-accent);
+}
+
+.option::before {
+  content: var(--icon-url);
+}
+
+.option--sedans {
+  --color-accent: var(--color-orange);
+  --icon-url: url(./images/icon-sedans.svg);
+}
+
+.option--suvs {
+  --color-accent: var(--color-cyan);
+  --icon-url: url(./images/icon-suvs.svg);
+}
+
+.option--luxury {
+  --color-accent: var(--color-dark-cyan);
+  --icon-url: url(./images/icon-luxury.svg);
+}
+
+.option__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.option__button {
+  --color-button: var(--color-main-alt);
+
+  height: 3rem;
+  padding: 0 2rem;
+  color: var(--color-accent);
+  background: var(--color-button);
+  border: 2px solid var(--color-button);
+  border-radius: 10rem;
+  transition: 150ms;
+  transition-property: transform, background, color;
+}
+
+.option__button:hover {
+  color: var(--color-button);
+  background: none;
+}
+
+.option__button:active {
+  transform: scale(99%);
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+/* --------------------------------- responsive --------------------------------- */
+
+@media (min-width: 41rem) {
+  .option__button {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .option__button {
+    margin-top: 3rem;
+  }
+}
