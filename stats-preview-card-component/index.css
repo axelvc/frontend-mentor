@@ -20,11 +20,7 @@ body {
   grid-template-rows: 1fr auto;
   place-items: center;
   min-height: 100vh;
-
-  /* font: 500 0.9375rem 'Inter', sans-serif; */
   font: 400 0.9375rem 'Lexend Deca', sans-serif;
-
-  /* font-family: 'Lexend Deca', sans-serif; */
   color: var(--color-fg);
   background: var(--color-bg);
 }
@@ -41,6 +37,7 @@ li {
 .card {
   --space: 1.5rem;
 
+  max-width: 33rem;
   margin: var(--space);
   overflow: hidden;
   background: var(--color-bg-alt);
@@ -49,6 +46,7 @@ li {
 
 .card__background {
   --color-filter: hsl(277, 64%, 25%, 0.65);
+  --background-image: url(./images/image-header-mobile.jpg);
 
   width: 100%;
   aspect-ratio: 1.36;
@@ -56,7 +54,7 @@ li {
   /* prettier-ignore */
   background:
     linear-gradient(var(--color-filter), var(--color-filter)),
-    top left / contain no-repeat url(./images/image-header-mobile.jpg);
+    top left / contain no-repeat var(--background-image);
 }
 
 .card__content {
@@ -90,6 +88,7 @@ li {
 }
 
 .stat__value {
+  font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
 }
 
@@ -102,4 +101,41 @@ li {
 footer {
   margin-bottom: 1rem;
   font-size: 0.75rem;
+}
+
+/* ------------------------------- responsive ------------------------------- */
+@media (min-width: 36rem) {
+  .stats {
+    grid-auto-flow: column;
+    margin-top: var(--space);
+  }
+
+  .card__content {
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 66rem;
+  }
+
+  .card__background {
+    --background-image: url(./images/image-header-desktop.jpg);
+
+    float: right;
+    height: 446px;
+    aspect-ratio: 1.21;
+  }
+
+  .card__content {
+    padding: 4rem;
+    text-align: start;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
 }
