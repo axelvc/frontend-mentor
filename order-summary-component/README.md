@@ -4,7 +4,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Live site
 
-https://frontendmentor-solved.netlify.app/order-summary-component-main/
+https://frontendmentor-solved.netlify.app/order-summary-component
 
 ### Screenshot
 
