@@ -75,6 +75,7 @@ li {
 }
 
 .option::before {
+  height: 40px;
   content: var(--icon-url);
 }
 
