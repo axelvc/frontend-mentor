@@ -18,7 +18,9 @@
 }
 
 body {
+  box-sizing: border-box;
   display: grid;
+  grid-template-rows: 1fr auto;
   place-items: center;
   min-height: 100vh;
   font: 500 1rem 'Red Hat Display', sans-serif;
@@ -143,6 +145,7 @@ button {
 
 /* --------------------------------- footer --------------------------------- */
 footer {
+  margin-bottom: 1rem;
   font-size: 0.75rem;
 }
 
