@@ -1,0 +1,220 @@
+:root {
+  /* colors */
+  --color-accent: hsl(333, 80%, 67%);
+  --color-accent-alt: hsl(300, 43%, 22%);
+  --color-fg: hsl(303, 10%, 53%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-bg-alt: hsl(300, 24%, 96%);
+
+  /* spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+  outline-color: var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+body {
+  --background-top: url(./images/bg-pattern-top-mobile.svg);
+  --background-bottom: url(./images/bg-pattern-bottom-mobile.svg);
+
+  min-height: 100vh;
+  font: 400 0.9375rem 'Spartan', sans-serif;
+  color: var(--color-fg);
+
+  /* prettier-ignore */
+  background:
+    left top no-repeat var(--background-top),
+    right bottom no-repeat var(--background-bottom),
+    var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-accent-alt);
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+main {
+  display: grid;
+  gap: var(--spacing-lg);
+  padding: calc(var(--spacing-lg) * 2) var(--spacing-sm);
+}
+
+.rounded {
+  border-radius: var(--spacing-xs);
+}
+
+/* presentation */
+.presentation {
+  display: grid;
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.presentation__title {
+  font-size: 2rem;
+}
+
+/* ratings */
+.rating {
+  display: grid;
+  gap: var(--spacing-sm);
+  text-align: center;
+}
+
+.rating__card {
+  display: grid;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  font-weight: 700;
+  color: var(--color-accent-alt);
+  background: var(--color-bg-alt);
+}
+
+.rating__stars {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+  justify-content: center;
+}
+
+/* reviews */
+.reviews {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
+  color: var(--color-bg);
+  background: var(--color-accent-alt);
+}
+
+.review__img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.review__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review__name {
+  color: unset;
+}
+
+.review__verified {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.review__text {
+  grid-column: span 2;
+}
+
+/* ------------------------------- responsive ------------------------------- */
+@media (min-width: 64rem) {
+  body {
+    --background-top: url(./images/bg-pattern-top-desktop.svg);
+    --background-bottom: url(./images/bg-pattern-bottom-desktop.svg);
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+  }
+
+  main {
+    grid-template-columns: 30rem 1fr;
+    gap: var(--spacing-lg) var(--spacing-sm);
+    max-width: 75rem;
+    padding: var(--spacing-lg);
+  }
+
+  /* presentation */
+  .presentation {
+    text-align: start;
+  }
+
+  .presentation__title {
+    max-width: 22rem;
+  }
+
+  /* ratings */
+  .rating {
+    justify-self: flex-end;
+  }
+
+  .rating__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+
+  .rating__card:first-child {
+    position: relative;
+    right: calc(var(--spacing-lg) * 2);
+  }
+
+  .rating__card:nth-child(2) {
+    position: relative;
+    right: var(--spacing-lg);
+  }
+
+  /* reviews */
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .review:nth-child(2) {
+    margin-top: var(--spacing-sm);
+  }
+
+  .review:nth-child(3) {
+    margin-top: calc(var(--spacing-sm) * 2);
+  }
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+a {
+  color: var(--color-accent);
+  border-radius: 0.1rem;
+  transition: 150ms ease-out color;
+}
+
+a:hover {
+  color: var(--color-accent-alt);
+}
