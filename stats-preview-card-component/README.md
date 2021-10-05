@@ -8,7 +8,7 @@ https://frontendmentor-solved.netlify.app/stats-preview-card-component
 
 ### Screenshot
 
-![](./result.jpg)
+![](./result.png)
 
 ## Contact
 
