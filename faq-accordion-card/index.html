@@ -11,58 +11,81 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | FAQ Accordion Card</title>
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <main>
-      <h1>FAQ</h1>
+    <main class="card">
+      <div class="card__illustration"></div>
 
-      <ul>
-        <li>
-          <details>
-            <summary>How many team members can I invite?</summary>
-            <p>
-              You can invite up to 2 additional users on the Free plan. There is
-              no limit on team members for the Premium plan.
-            </p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>What is the maximum file upload size?</summary>
-            <p>
-              No more than 2GB. All files in your account must fit your allotted
-              storage space.
-            </p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>How do I reset my password?</summary>
-            <p>
-              Click “Forgot password” from the login page or “Change password”
-              from your profile page. A reset link will be emailed to you.
-            </p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>Can I cancel my subscription?</summary>
-            <p>
-              Yes! Send us a message and we’ll process your request no questions
-              asked.
-            </p>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>Do you provide additional support?</summary>
-            <p>
-              Chat and email support is available 24/7. Phone lines are open
-              during normal business hours.
-            </p>
-          </details>
-        </li>
-      </ul>
+      <div class="card__content">
+        <h1 class="card__title">FAQ</h1>
+
+        <ul>
+          <li>
+            <details class="faq">
+              <summary class="faq__question">
+                How many team members can I invite?
+              </summary>
+              <p class="faq__answer">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="faq">
+              <summary class="faq__question">
+                What is the maximum file upload size?
+              </summary>
+              <p class="faq__answer">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="faq">
+              <summary class="faq__question">
+                How do I reset my password?
+              </summary>
+              <p class="faq__answer">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="faq">
+              <summary class="faq__question">
+                Can I cancel my subscription?
+              </summary>
+              <p class="faq__answer">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details class="faq">
+              <summary class="faq__question">
+                Do you provide additional support?
+              </summary>
+              <p class="faq__answer">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </details>
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer>

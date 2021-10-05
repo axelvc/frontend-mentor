@@ -1,0 +1,205 @@
+:root {
+  /* colors */
+  --color-accent: hsl(14, 88%, 65%);
+  --color-fg: hsl(240, 6%, 50%);
+  --color-fg-title: hsl(238, 29%, 16%);
+  --color-fg-faq: hsl(237, 12%, 33%);
+  --color-bg: hsl(240, 5%, 91%);
+
+  /* prettier-ignore */
+  --color-gradient:
+    linear-gradient(
+      to bottom,
+      hsl(273, 75%, 66%),
+      hsl(240, 73%, 65%)
+    );
+
+  /* spacing */
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+  outline-color: var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  min-height: 100vh;
+  font: 400 0.75rem 'Kumbh Sans', sans-serif;
+  color: var(--color-fg);
+  background: no-repeat var(--color-gradient);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--color-fg-title);
+}
+
+li,
+summary {
+  list-style: none;
+}
+
+/* ---------------------------------- card ---------------------------------- */
+.card {
+  width: calc(100% - var(--spacing-md) * 2);
+  max-width: 64rem;
+  margin: var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--spacing-sm);
+  box-shadow: 0 2rem 2rem hsl(240, 40%, 42%);
+}
+
+/* illustration */
+
+.card__illustration {
+  position: relative;
+  height: 104px;
+  background: center no-repeat url(./images/bg-pattern-mobile.svg);
+}
+
+/* .card__illustration::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: url(./images/bg-pattern-mobile.svg);
+  transform: translate(-50%);
+  animation: 2s shadow ease-in-out alternate infinite;
+} */
+
+.card__illustration::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: url(./images/illustration-woman-online-mobile.svg);
+  transform: translate(-55%, -10%);
+
+  /* animation: 2s movement ease-in-out alternate infinite; */
+}
+
+/* content */
+.card__content {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
+}
+
+.card__title {
+  text-align: center;
+}
+
+/* faq */
+.faq {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq__question {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  font-size: 0.875rem;
+  color: var(--color-fg-faq);
+  cursor: pointer;
+  transition: 150ms ease-out color;
+}
+
+.faq[open] .faq__question {
+  font-weight: 700;
+  color: var(--color-fg-title);
+}
+
+.faq .faq__question:hover {
+  color: var(--color-accent);
+}
+
+.faq__question::after {
+  content: url(./images/icon-arrow-down.svg);
+  transition: 150ms ease-out transform;
+}
+
+.faq[open] .faq__question::after {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ------------------------------- responsive ------------------------------- */
+@media (min-width: 70rem) {
+  :root {
+    --spacing-sm: 2rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 5rem;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  /* illustration */
+  .card__illustration {
+    width: 483px;
+    height: auto;
+
+    /* prettier-ignore */
+    background:
+      -75px 50% no-repeat url(./images/illustration-woman-online-desktop.svg),
+      right 80px bottom 30% no-repeat url(./images/bg-pattern-desktop.svg);
+  }
+
+  .card__illustration::after {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    content: url(./images/illustration-box-desktop.svg);
+    transform: translate(-50%, 77%);
+  }
+
+  /* content */
+  .card__content {
+    flex: 1;
+    padding: var(--spacing-lg);
+  }
+
+  .card__title {
+    font-size: 2rem;
+    text-align: start;
+  }
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.75rem;
+  color: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  border-radius: 0.1rem;
+  transition: 150ms ease-out;
+  transition-property: background, color;
+}
+
+a:hover {
+  color: var(--color-bg);
+  background: var(--color-accent);
+}
