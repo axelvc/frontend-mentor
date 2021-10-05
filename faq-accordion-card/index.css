@@ -64,21 +64,11 @@ summary {
 }
 
 /* illustration */
-
 .card__illustration {
   position: relative;
   height: 104px;
   background: center no-repeat url(./images/bg-pattern-mobile.svg);
 }
-
-/* .card__illustration::before {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  content: url(./images/bg-pattern-mobile.svg);
-  transform: translate(-50%);
-  animation: 2s shadow ease-in-out alternate infinite;
-} */
 
 .card__illustration::after {
   position: absolute;
