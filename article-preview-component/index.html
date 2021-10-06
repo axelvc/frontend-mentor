@@ -20,6 +20,8 @@
     />
     <!-- styles -->
     <link rel="stylesheet" href="./index.css" />
+    <!-- js -->
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <main class="card">
@@ -50,7 +52,7 @@
           <span class="info__date">28 Jun 2020</span>
         </div>
 
-        <button class="rounded info__share">
+        <button id="share-button" class="rounded info__share">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
             <path
               fill="currentColor"
@@ -59,7 +61,7 @@
           </svg>
         </button>
 
-        <div class="share">
+        <div id="share-networks" class="share">
           <span>Share</span>
           <a class="icon icon--facebook" href="https://www.facebook.com">
             facebook
