@@ -11,11 +11,21 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Four card feature section</title>
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <main>
-      <section>
-        <h1>
+      <section class="description">
+        <h1 class="description__title">
           <span>Reliable, efficient delivery</span>
           Powered by Technology
         </h1>
@@ -26,27 +36,31 @@
         </p>
       </section>
 
-      <section>
-        <article>
-          <h1>Supervisor</h1>
-          <p>Monitors activity to identify project roadblocks</p>
+      <section class="features">
+        <article class="card card--supervisor">
+          <h1 class="card__title">Supervisor</h1>
+          <p class="card__description">
+            Monitors activity to identify project roadblocks
+          </p>
         </article>
 
-        <article>
-          <h1>Team Builder</h1>
-          <p>
+        <article class="card card--team">
+          <h1 class="card__title">Team Builder</h1>
+          <p class="card__description">
             Scans our talent network to create the optimal team for your project
           </p>
         </article>
 
-        <article>
-          <h1>Karma</h1>
-          <p>Regularly evaluates our talent to ensure quality</p>
+        <article class="card card--karma">
+          <h1 class="card__title">Karma</h1>
+          <p class="card__description">
+            Regularly evaluates our talent to ensure quality
+          </p>
         </article>
 
-        <article>
-          <h1>Calculator</h1>
-          <p>
+        <article class="card card--calculator">
+          <h1 class="card__title">Calculator</h1>
+          <p class="card__description">
             Uses data from past projects to provide better delivery estimates
           </p>
         </article>
